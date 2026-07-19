@@ -84,7 +84,7 @@
   .module-card .module-head:hover { filter: brightness(0.97); }
   .module-card .module-head .chevron { font-size: 13px; color: var(--ink-soft); transition: transform .15s ease; flex-shrink: 0; }
   .module-card.open .module-head .chevron { transform: rotate(90deg); }
-  .module-card .module-body { display: none; padding: 0 24px 24px; }
+  .module-card .module-body { display: none; padding: 20px 24px 26px; }
   .module-card.open .module-body { display: block; }
   .module-card .module-body .card { border: none; box-shadow: none; border-radius: 0; margin-bottom: 0; padding: 0; }
   .card h3 { font-size: 16.5px; margin: 22px 0 8px; color: var(--accent); }
@@ -510,7 +510,6 @@ if (hasFoundations) {
   const foundationsView = el('section', { class: 'view active', id: 'view-foundations' });
   foundationsView.appendChild(el('div', { class: 'section-kicker', html: 'Book-wide' }));
   foundationsView.appendChild(el('div', { class: 'section-title', html: 'Foundations' }));
-  foundationsView.appendChild(el('div', { class: 'lede', html: 'The framework behind every organ chapter in this workbook — read once, applies throughout.' }));
   const multipleFoundationSections = DATA.foundationSections.length > 1;
   DATA.foundationSections.forEach((s, i) => {
     if (!multipleFoundationSections) {
