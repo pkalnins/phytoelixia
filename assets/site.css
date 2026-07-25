@@ -57,7 +57,6 @@ nav.topnav a.active { background: var(--accent); color: #fff; }
   width: var(--sidebar-width); flex-shrink: 0; padding: 24px 16px 60px;
   position: sticky; top: 49px; align-self: flex-start;
   max-height: calc(100vh - 49px); overflow-y: auto;
-  border-right: 1px solid var(--rule);
 }
 .sidebar .tree-section-label {
   text-transform: uppercase; letter-spacing: .12em; font-size: 11px;
@@ -299,6 +298,13 @@ a.organ-module-card.live:hover, a.link-card:hover { border-color: var(--accent);
 footer { text-align: center; color: var(--ink-soft); font-size: 12px; padding: 40px 0 10px; }
 
 @media (max-width: 900px) {
+  .site-header { flex-wrap: wrap; row-gap: 8px; }
+  .site-header .brand { font-size: 17px; }
+  .site-header .brand span:last-child {
+    display: inline-block; max-width: 60vw; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap; vertical-align: middle;
+  }
+  nav.topnav { flex-basis: 100%; }
   .sidebar-toggle { display: inline-block; }
   .sidebar {
     position: fixed; top: 49px; left: 0; bottom: 0; z-index: 25;
