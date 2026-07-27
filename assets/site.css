@@ -136,6 +136,22 @@ nav.topnav a.active { background: var(--accent); color: #fff; }
   background: var(--paper-alt); border-radius: 0 6px 6px 0; font-size: 13.5px; color: var(--ink-soft);
 }
 .card blockquote p { margin: 0; }
+/* chapter-opening summary box: the leading blockquote, styled like .page-toc
+   (full border, eyebrow label) rather than the left-accent-bar quote style
+   above, since it's a skimmable thesis summary, not an aside */
+.card > blockquote:first-child {
+  margin: 0 0 18px; padding: 14px 20px; border-left: none;
+  border: 1px solid var(--rule); border-radius: 10px;
+  background: var(--paper-alt); font-size: 13.5px; color: var(--ink-soft);
+}
+.card > blockquote:first-child > p:first-child {
+  text-transform: uppercase; letter-spacing: .1em; font-size: 11px;
+  color: var(--accent-2); font-weight: 600; margin: 0 0 8px;
+}
+.card > blockquote:first-child ul { padding-left: 20px; margin: 0; }
+.card > blockquote:first-child li { margin-bottom: 6px; font-size: 13.5px; }
+.card > blockquote:first-child li:last-child { margin-bottom: 0; }
+.card > blockquote:first-child li strong { color: var(--ink); }
 .card pre {
   background: var(--paper-alt); border: 1px solid var(--rule); border-radius: 8px;
   padding: 16px 20px; margin: 18px 0 24px; overflow-x: auto; -webkit-overflow-scrolling: touch;
